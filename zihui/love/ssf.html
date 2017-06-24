@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title></title>
+<script type="text/javascript">
+        window.onload=function(){
+                var btn=document.getElementById('btn');
+                var tou=document.getElementById('tou');
+                var speed=10;
+                var dsq;
+                btn.onclick=function(){
+                        clearInterval(dsq);
+                         dsq=setInterval(function(){
+                                var old_width=tou.style.width;
+                                var new_width=parseInt(old_width)+speed;
+                                tou.style.width=new_width+'px';
+                                
+                                var old_height=tou.style.height;
+                                var new_height=parseInt(old_height)+speed;
+                                tou.style.height=new_height+'px';
+                                
+                                if(new_width==500 || new_width==200){
+                                        speed=speed*-1;
+                                }
+                                
+                },100)
+          }
+        }
+</script>
+        </head>
+        <body>
+                <input type="button" value="点我啊！！！" id="btn" />
+                <br />
+                <br />
+                <br />
+                <br />
+                <img src="tou.jpg" id="tou" style="width: 480px;height: 720px;margin-top: 0px;"/>
+        </body>
+</html>
